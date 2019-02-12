@@ -1,0 +1,36 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>果物マスタ管理</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+    </head>
+    <body>
+
+        <p><a href="{% url 'top' %}">TOP</a> -- 果物マスタ管理 <p>
+
+
+        <table>
+            <tr>ID</tr>
+            <tr>名称</tr>
+            <tr>単価</tr>
+            <tr>登録日時</tr>
+        </tr>
+        {% for item in query_results.all %}
+        <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.fruit_name }}</td>
+            <td>{{ item.fruit_price }}</td>
+            <td>{{ item.fruit_date }}</td>
+        </tr>
+        {% endfor %}
+        </table>
+
+    </body>
+</html>
