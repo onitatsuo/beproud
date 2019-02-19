@@ -1,5 +1,24 @@
 <!doctype html>
 <html class="no-js" lang="">
+
+    <style>
+
+        .button-add {
+     background-color: #FFF;
+     border: 2px solid #000;
+     color: #000;
+     padding: 10px 20px;
+    }
+ 
+     .button-add:hover {
+     background: #COLOR;
+     color: #COLOR;
+     text-decoration: none;
+     }
+
+
+
+    </style>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -22,7 +41,7 @@
             <tr>単価</tr>
             <tr>登録日時</tr>
         </tr>
-        {% for item in query_results.all %}
+        {% for item in query_results %}
         <tr>
             <td>{{ item.id }}</td>
             <td>{{ item.fruit_name }}</td>
@@ -31,6 +50,12 @@
         </tr>
         {% endfor %}
         </table>
+
+        <br>
+        <br>
+
+        <a class="button-add" href="{% url 'add' %}">新規追加</a>
+
 
     </body>
 </html>

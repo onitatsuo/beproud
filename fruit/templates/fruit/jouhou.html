@@ -1,0 +1,39 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>販売情報管理</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+    </head>
+    <body>
+       <p><a href="{% url 'top' %}">TOP</a> -- 販売情報管理  <p>
+           　
+
+        <table>
+
+        <tr>
+            <th>果物 </th>
+            <th>個数</th>
+            <th>売り上げ</th>
+            <th>販売日時</th>
+        </tr>
+        {% for item in fruits %}
+        <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.fruit_name }}</td>
+            <td>{{ item.fruit_price }}</td>
+            <td>{{ item.fruit_date }}</td>
+        </tr>
+        {% endfor %}
+        </table>
+
+
+
+    </body>
+</html>

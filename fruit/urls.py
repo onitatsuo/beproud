@@ -13,4 +13,5 @@ urlpatterns =[
     path('jouhou', views.jouhou, name='jouhou'),
     path('toukei', views.toukei, name='toukei'),
     path('add', views.add, name='add'),
+    path('add', views.add_it),
 ]
