@@ -17,6 +17,7 @@ class Master(models.Model):
 class Add(models.Model):
     fruit_name = models.CharField(max_length=30)
     fruit_price = models.IntegerField()
+    fruit_date = models.DateField(auto_now_add=True)
 
     def __str__(self):
         return self.name

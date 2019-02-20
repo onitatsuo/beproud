@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
-from fruit.models import Master
+from fruit.models import Master, Add
 from django.views.generic.list import ListView
 from .forms import DataForm, AddForm
 
@@ -15,7 +15,7 @@ def top(request):
 
 @login_required(login_url='/login')
 def master(request):
-    query_results = Master.objects.all()
+    query_results = Add.objects.all()
     return render(request, 'fruit/master.html', {'query_results':query_results})
 
 @login_required(login_url='/login')
