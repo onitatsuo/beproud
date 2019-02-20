@@ -15,7 +15,7 @@ def top(request):
 
 @login_required(login_url='/login')
 def master(request):
-    query_results = Add.objects.all()
+    query_results = Add.objects.all() #`.latest('fruit_date')
     return render(request, 'fruit/master.html', {'query_results':query_results})
 
 @login_required(login_url='/login')

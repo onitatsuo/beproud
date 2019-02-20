@@ -17,8 +17,20 @@
      }
 
 
+     table {
+         border-collapse: separate;
+         border-spacing: 50px 0;
+     }
+
+     td {
+         padding: 5px 0;
+     }
+
 
     </style>
+
+
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -36,10 +48,11 @@
 
 
         <table>
-            <tr>ID</tr>
-            <tr>名称</tr>
-            <tr>単価</tr>
-            <tr>登録日時</tr>
+        <tr>
+            <td>ID</td>
+            <td>名称</td>
+            <td>単価</td>
+            <td>登録日時</td>
         </tr>
         {% for item in query_results %}
         <tr>

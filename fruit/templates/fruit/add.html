@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Untitled</title>
+        <title>新規追加</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,20 +14,12 @@
     <body>
 
         果物登録<br><br>
-        <!---- <form>
-             名称
-             <input type="text" name="name"><br><br>
-             単価
-             <input type="text" name="number">
-             <br><br>
-              <input type="submit" value="登録">
-         </form> --->
 
         <form method="post">
 
             {% csrf_token %}
             {{ form }}
-            <button type="submit">Submit</button>
+            <button type="submit">追加</button>
         </form>
 
     </body>
